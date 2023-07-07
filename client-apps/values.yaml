@@ -6,7 +6,7 @@ default:
       namespace: test
       server: https://kubernetes.default.svc
     source:
-      targetRevision: main
+      targetRevision: HEAD
 
 applications:
   nginx:

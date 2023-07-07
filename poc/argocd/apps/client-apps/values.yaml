@@ -1,0 +1,15 @@
+envName: test
+
+default:
+  app:
+    destination:
+      namespace: test
+      server: https://kubernetes.default.svc
+    source:
+      targetRevision: test
+
+applications:
+  nginx:
+    source:
+      path: poc/argocd/apps/services/nginx
+      repoURL: https://MY_APPS_REPOSITORY/onboarding/cd-pdf-service.git

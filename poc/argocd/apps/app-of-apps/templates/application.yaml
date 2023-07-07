@@ -1,0 +1,16 @@
+{{- range .Values.tenants }}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ . }}
+  namespace: argocd
+spec:
+  project: default
+  repoURL: https://github.com/andresmanzanaressouthworks/argocd.git
+    targetRevision: poc/argocd-apps
+    path: poc/argocd/apps/clients
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+{{- end }}

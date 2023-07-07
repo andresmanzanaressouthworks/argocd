@@ -12,5 +12,5 @@ spec:
     path: {{ tpl $val.source.path $ }}
   destination:
     server: https://kubernetes.default.svc
-    namespace: {{ $.Values.tenant }}
+    namespace: argocd #{{ $.Values.tenant }}
 {{- end }}

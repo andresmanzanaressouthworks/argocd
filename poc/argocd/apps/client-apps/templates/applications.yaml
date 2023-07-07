@@ -10,11 +10,11 @@ spec:
     repoURL: {{ $val.source.repoURL }}
     targetRevision: HEAD
     path: {{ tpl $val.source.path $ }}
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: argocd #{{ $.Values.tenant }}
     helm:
       parameters:
         - name: tenant
           value: {{ $.Values.tenant }}
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd #{{ $.Values.tenant }}    
 {{- end }}

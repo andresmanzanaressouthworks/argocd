@@ -12,4 +12,4 @@ applications:
   nginx:
     source:
       path: poc/argocd/apps/services/nginx
-      repoURL: https://MY_APPS_REPOSITORY/onboarding/cd-pdf-service.git
+      repoURL: https://github.com/andresmanzanaressouthworks/argocd.git

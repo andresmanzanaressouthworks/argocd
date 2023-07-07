@@ -11,6 +11,10 @@ spec:
     repoURL: https://github.com/andresmanzanaressouthworks/argocd.git
     targetRevision: HEAD
     path: poc/argocd/apps/client-apps
+    helm:
+      parameters:
+        - name: tenant
+          value: {{ . }}
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd

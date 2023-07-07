@@ -1,3 +1,4 @@
+tenant: default # It receives this parameter from helm > values
 applications:
   nginx:
     source:

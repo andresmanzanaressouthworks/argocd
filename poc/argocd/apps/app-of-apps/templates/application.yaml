@@ -7,9 +7,9 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
+  source:  
     repoURL: https://github.com/andresmanzanaressouthworks/argocd.git
-    targetRevision: poc/argocd-apps
+    targetRevision: HEAD
     path: poc/argocd/apps/clients-apps
   destination:
     server: https://kubernetes.default.svc

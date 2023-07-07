@@ -5,12 +5,12 @@ kind: Application
 metadata:
   name: {{ $key }}
 spec:
-  destination:
-    namespace: {{ $.Values.default.app.destination.namespace }}
-    server: {{ $.Values.default.app.destination.server }}
-  project: {{ $.Values.envName }}
+  project: default
   source:
     repoURL: {{ $val.source.repoURL }}
     targetRevision: HEAD
-    path: {{ tpl $val.source.path $ }}
+    path: {{ tpl $val.source.path }}
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
 { - end }}

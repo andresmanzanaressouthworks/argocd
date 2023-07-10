@@ -1,4 +1,4 @@
 ---
 apiVersion: v2
-name: flywheel-apps
+name: flywheel-tenants
 version: 0.2.0

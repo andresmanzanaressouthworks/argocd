@@ -3,6 +3,6 @@ apiVersion: v2
 name: nginx
 version: 0.1.0
 dependencies:
-- name: nginx
+- name: bitnami/nginx
   version: "15.1.0"
-  repository: "https://charts.bitnami.com/bitnami/nginx"
+  repository: "https://charts.bitnami.com/bitnami"

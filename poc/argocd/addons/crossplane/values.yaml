@@ -1,2 +1,4 @@
-providers:
-- azure
+crossplane:
+  provider:
+    packages:
+      - xpkg.upbound.io/upbound/provider-azure-azure:v0.34.0

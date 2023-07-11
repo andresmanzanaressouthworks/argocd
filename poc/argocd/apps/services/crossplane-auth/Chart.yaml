@@ -1,0 +1,3 @@
+apiVersion: v2
+name: crossplane-auth
+version: 0.0.1

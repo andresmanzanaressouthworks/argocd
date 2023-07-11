@@ -1,0 +1,3 @@
+resource_group:
+  name: tenant-specific-rg
+  location: West Europe

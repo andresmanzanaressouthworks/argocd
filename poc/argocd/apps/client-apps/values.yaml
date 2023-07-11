@@ -4,3 +4,11 @@ applications:
     source:
       path: poc/argocd/apps/services/nginx
       repoURL: https://github.com/andresmanzanaressouthworks/argocd.git
+  azure-resources:
+    source:
+      path: poc/argocd/apps/services/azure-resources
+      repoURL: https://github.com/andresmanzanaressouthworks/argocd.git
+  crossplane-auth:
+    source:
+      path: poc/argocd/apps/services/crossplane-auth
+      repoURL: https://github.com/andresmanzanaressouthworks/argocd.git

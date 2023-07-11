@@ -1,2 +1,6 @@
 tenants:
-  - tenant2
+  - name: tenant1
+    provider_config:
+      client_id: 5f7cb960-6b23-4ee8-a553-81d19d7b8954
+      subscription_id: 1b7f2492-f5d2-4a5e-91f6-bb9dc7177799
+      tenant_id: b25036e3-de39-4fec-a4aa-bda41b870d38

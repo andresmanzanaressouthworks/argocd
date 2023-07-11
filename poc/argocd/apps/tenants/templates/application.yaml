@@ -1,10 +1,10 @@
-{{- range .Values.tenants }}
+{{- range $key,$val := .Values.tenants }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ . }}
-  namespace: argocd
+  name: {{ $val.name }}
+  namespace: {{ $val.name }}
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -14,9 +14,12 @@ spec:
     targetRevision: HEAD
     path: poc/argocd/apps/client-apps
     helm:
-      parameters:
-        - name: tenant
-          value: {{ . }}
+      values: |
+        tenant: {{ $val.name }}
+        provider_config:
+          client_id: {{ $val.provider_config.client_id }}
+          subscription_id: {{ $val.provider_config.subscription_id }}
+          tenant_id: {{ $val.provider_config.tenant_id }}
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd

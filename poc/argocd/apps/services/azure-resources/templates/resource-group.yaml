@@ -2,9 +2,10 @@
 apiVersion: azure.upbound.io/v1beta1
 kind: ResourceGroup
 metadata:
-  name: {{ .Values.resource_group.name }}
+  name: {{ printf "%s-%s" .Values.name "rg" }}
+  namespace: {{ .Values.name }}
 spec:
   forProvider:
-    location: {{ .Values.resource_group.location }}
-    tags:
-      provisioner: crossplane
+    location: {{ .Values.location }}
+    providerConfigRef:
+      name: {{ printf "%s-%s" .Values.name "azure-provider-config" }}

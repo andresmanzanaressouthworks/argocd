@@ -1,0 +1,10 @@
+apiVersion: azure.upbound.io/v1beta1
+kind: ProviderConfig
+metadata:
+  name: {{ printf "%s-%s" .Values.name "azure-provider-config" }}
+spec:
+  clientID: {{ .Values.provider_config.client_id }} # 5f7cb960-6b23-4ee8-a553-81d19d7b8954
+  credentials:
+    source: SystemAssignedManagedIdentity
+  subscriptionID: {{ .Values.provider_config.subscription_id }} # 1b7f2492-f5d2-4a5e-91f6-bb9dc7177799
+  tenantID: {{ .Values.provider_config.tenant_id }} # b25036e3-de39-4fec-a4aa-bda41b870d38

@@ -1,3 +1,2 @@
-resource_group:
-  name: tenant-specific-rg
-  location: East US
+name: default
+location: "East US"

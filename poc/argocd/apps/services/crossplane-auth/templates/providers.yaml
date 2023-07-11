@@ -1,9 +1,0 @@
-# This will be installed as part of crossplane installation. This file should be removed
-
-# ---
-# apiVersion: pkg.crossplane.io/v1
-# kind: Provider
-# metadata:
-#   name: provider-azure-azure
-# spec:
-#   package: xpkg.upbound.io/upbound/provider-azure-azure:v0.34.0

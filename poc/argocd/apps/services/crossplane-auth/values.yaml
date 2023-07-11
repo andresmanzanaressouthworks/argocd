@@ -1,0 +1,5 @@
+name: default
+provider_config:
+  client_id: default
+  subscription_id: default
+  tenant_id: default

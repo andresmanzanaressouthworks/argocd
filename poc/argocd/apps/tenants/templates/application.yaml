@@ -4,7 +4,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: {{ $val.name }}
-  namespace: {{ $val.name }}
+  namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:

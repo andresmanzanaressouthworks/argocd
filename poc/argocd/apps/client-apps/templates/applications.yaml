@@ -3,6 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: {{ printf "%s-%s" .Values.name "nginx" }}
+  namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -24,6 +25,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: {{ printf "%s-%s" .Values.name "azure-resources" }}
+  namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -45,6 +47,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: {{ printf "%s-%s" .Values.name "crossplane-auth" }}
+  namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
